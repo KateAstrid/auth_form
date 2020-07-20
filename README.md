@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Приветствую!
 
-## Available Scripts
+Чтобы запустить проект, сначала нужно запустить сервер с моковыми данными. Я использовала сервер json-server-auth, который 
+лишает меня необходимости писать бэкэнд. Чтобы запустить сервер, набираем в консоли:
 
-In the project directory, you can run:
+npm install -D json-server json-server-auth
+json-server db.json -m ./node_modules/json-server-auth -r routes.json
 
-### `npm start`
+После установки и запуска сервера набираем:
+npm start
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Как и требовалось в задании, приложение состоит из двух страниц. Поскольку я писала приложение с использованием React JS, 
+для ссылок на каждую страницу использовала библиотеку React Router. Также подключила библиотеку FontAwesomeIcon и подгрузила
+шрифт Inconsolata из  Google Fonts. Люблю плоский дизайн и темные темы. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Кратко по файлам проекта:
+- LoginComponent.js - страница входа;
+- ContactsTable.js - работа с контактами: добавление, редактирование, удаление и поиск;
+- App.js - HTML-разметка страницы с контактами и роуты на обе страницы приложения. 
 
-### `npm test`
+Сейчас в базе три пользователя:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1)  login 111@111.111
+    password 111.111@111
 
-### `npm run build`
+2)  login 222@222.222
+    password 222@222.222
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3)  login: 333@333.333
+    password: 333@333.333
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Первый и второй пользователь имеют свой набор контактов, третий - пустой. Также можно зарегистрировать новый контакт, введя новые данные в логин и пароль.  Логин требует почту, поэтому должен содержать '@', а пароль должен быть не меньше четырех символов. 
+Контакты можно редактировать, удалять и добавлять. Поиск работает как по номерам, так и по именам контактов. Выход из пользователя
+очищает куки и требует введения пароля заново. Я не стала делать пагинацию, так как этого не требовало задание, но знаю, как это
+реализовать - постраничный запрос к серверу на каждую кнопку страницы. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+При авторизации или регистрации приложение отправляет запрос контактов на сервер. Код сервера написан таким образом, что он сравнивает
+userId пользователя с имеющимися записями по этому пользователю в базе данных. И если ни одна строчка данных не совпадает по userId (например, когда регистрирую нового пользователя, у которого еще нет контактов), то сервер падает. Поэтому запрос контактов я отправляю без указания роута 600, который требует, чтобы пользователь владел данными для чтения и редактирования. Все остальные запросы (удаление, редактирование и добавление контактов) я отправляю через роут 600. 
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Приятного тестирования)

@@ -1,0 +1,105 @@
+{
+  "contacts": [
+    {
+      "name": "kate",
+      "number": "098734",
+      "userId": "2",
+      "id": 7
+    },
+    {
+      "name": "anton",
+      "number": "777777333",
+      "userId": "2",
+      "id": 8
+    },
+    {
+      "name": "mall",
+      "number": "12234",
+      "userId": "1",
+      "id": 9
+    },
+    {
+      "name": "emergency",
+      "number": "911",
+      "userId": "1",
+      "id": 10
+    },
+    {
+      "name": "doctor",
+      "number": "23456",
+      "userId": "1",
+      "id": 14
+    },
+    {
+      "name": "laundry",
+      "number": "3345678",
+      "userId": "1",
+      "id": 15
+    },
+    {
+      "name": "bookstore",
+      "number": "323409",
+      "userId": "1",
+      "id": 16
+    },
+    {
+      "name": "flowers",
+      "number": "364749302",
+      "userId": "1",
+      "id": 17
+    },
+    {
+      "name": "Sasha",
+      "number": "098867654",
+      "userId": "1",
+      "id": 18
+    },
+    {
+      "name": "Lena",
+      "number": "232323233",
+      "userId": "2",
+      "id": 19
+    },
+    {
+      "name": "George",
+      "number": "33332783",
+      "userId": "2",
+      "id": 20
+    },
+    {
+      "name": "Valerie",
+      "number": "4223333",
+      "userId": "2",
+      "id": 21
+    },
+    {
+      "name": "Viktor",
+      "number": "089787687",
+      "userId": "2",
+      "id": 24
+    },
+    {
+      "name": "Rasta",
+      "number": "78247876",
+      "userId": "2",
+      "id": 25
+    }
+  ],
+  "users": [
+    {
+      "email": "111@111.111",
+      "password": "$2a$10$/LwG8GUohM0GbILv30nJeeUG1uWy.FD7VpJs5zFCUUPFJAduDk9kC",
+      "id": 1
+    },
+    {
+      "email": "222@222.222",
+      "password": "$2a$10$w9vURPTmtHxIflP0ljJrS.3.gNIMsV8EyQ61oX4Q2GvnY9vvw3qWW",
+      "id": 2
+    },
+    {
+      "email": "333@333.333",
+      "password": "$2a$10$8Ih1NZTs8bM2HdlPpb0ro.PcTQ7aOk5XxQ/OUBJXr3h7iVehVuuWy",
+      "id": 3
+    }
+  ]
+}
