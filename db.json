@@ -1,88 +1,109 @@
 {
   "contacts": [
     {
-      "name": "kate",
-      "number": "098734",
-      "userId": "2",
-      "id": 7
-    },
-    {
-      "name": "anton",
-      "number": "777777333",
-      "userId": "2",
-      "id": 8
-    },
-    {
       "name": "mall",
       "number": "12234",
+      "email": "katrin892003@yandex.ru",
       "userId": "1",
       "id": 9
     },
     {
       "name": "emergency",
       "number": "911",
+      "email": "kat892@yandex.ru",
       "userId": "1",
       "id": 10
     },
     {
       "name": "doctor",
       "number": "23456",
+      "email": "trin89@yandex.ru",
       "userId": "1",
       "id": 14
     },
     {
       "name": "laundry",
       "number": "3345678",
+      "email": "ggrin892003@ya.ru",
       "userId": "1",
       "id": 15
     },
     {
       "name": "bookstore",
       "number": "323409",
+      "email": "892003@gmail.com",
       "userId": "1",
       "id": 16
     },
     {
       "name": "flowers",
       "number": "364749302",
+      "email": "katrin@yandex.ru",
       "userId": "1",
       "id": 17
     },
     {
       "name": "Sasha",
-      "number": "098867654",
+      "number": "98867654",
+      "email": "s2003@mail.ru",
       "userId": "1",
       "id": 18
     },
     {
-      "name": "Lena",
-      "number": "232323233",
-      "userId": "2",
-      "id": 19
-    },
-    {
       "name": "George",
       "number": "33332783",
+      "email": "fin768@yandex.kz",
       "userId": "2",
       "id": 20
     },
     {
       "name": "Valerie",
       "number": "4223333",
+      "email": "489ma3@crot.ru",
       "userId": "2",
       "id": 21
     },
     {
       "name": "Viktor",
       "number": "089787687",
+      "email": "karrp@yandex.ru",
       "userId": "2",
       "id": 24
     },
     {
       "name": "Rasta",
       "number": "78247876",
+      "email": "top100@saf.ru",
       "userId": "2",
       "id": 25
+    },
+    {
+      "name": "23",
+      "number": "45",
+      "email": "qwerty@foo.bar",
+      "userId": "2",
+      "id": 26
+    },
+    {
+      "name": "2",
+      "number": "2",
+      "email": "foobar43@pul.ru",
+      "userId": "2",
+      "id": 27
+    },
+    {
+      "name": "2",
+      "number": "3",
+      "email": "hfjfkf@yandex.lk",
+      "userId": "2",
+      "id": 28
+    },
+    {
+      "name": "shop",
+      "number": "33456",
+      "email": "0495736@kdghg.ru",
+      "userId": "1",
+      "id": 29
     }
   ],
   "users": [
@@ -100,6 +121,21 @@
       "email": "333@333.333",
       "password": "$2a$10$8Ih1NZTs8bM2HdlPpb0ro.PcTQ7aOk5XxQ/OUBJXr3h7iVehVuuWy",
       "id": 3
+    },
+    {
+      "email": "222@7874r",
+      "password": "$2a$10$dpRtN8LW0NnkSznGl9hEVup/SByPGLgnqnzaThySWFuNj5s7lUMry",
+      "id": 4
+    },
+    {
+      "email": "222@3333",
+      "password": "$2a$10$7ee0BSjwAEFxRVeNAjcmW.SwT7YpiNzWPq9Se/ZTparZkmtmylV.m",
+      "id": 5
+    },
+    {
+      "email": "222@222",
+      "password": "$2a$10$2JwLO7X/8dQxn5S4792wvOelYL7aKskZbXc17r36mmT54nx2ee/BO",
+      "id": 6
     }
   ]
 }

@@ -14,37 +14,56 @@ library.add(faFan, faSearch, faCheckSquare,  faTrashAlt, faEdit, faPlusSquare, f
 const Data = () => {
   const [contacts, setContacts] = useState();
   const [search, setSearch] = useState('');
+  const [sort, setSort] = useState([]);
   
   if (contacts === undefined) {
     requestContacts(setContacts)
   };
 
   const searchContacts = (contact) => {
-    return contact.name.toLowerCase().includes(search.toLowerCase())||
-      contact.number.toLowerCase().includes(search.toLowerCase())
-  }
+    return contact.name.toLowerCase().includes(search.toLowerCase()) ||
+      contact.number.toLowerCase().includes(search.toLowerCase()) ||
+      contact.email.toLowerCase().includes(search.toLowerCase())
+  };
   
   const handleBack = () => {
     document.location.assign('/');
     document.cookie =`token=''`; 
-  }
+  };
+
+  const handleSort = (event, key) => {
+    event.preventDefault()
+    const data = [...contacts]
+
+    if (sort[0] === key && sort[1] === 'asc') {
+      data.sort((a,b) => a[key].localeCompare(b[key]))
+      setSort([key, 'des'])
+    } else {
+      data.sort((a,b) => b[key].localeCompare(a[key])) 
+      setSort([key, 'asc'])
+    };
+  
+    console.log(data, 'data')
+    setContacts(data)
+  };
 
   const filtredContacts = (
-    (contacts && search.length>0) ? contacts.filter(contact => searchContacts(contact, search)) : contacts
-  )
+    (contacts && search.length > 0) ? contacts.filter(contact => searchContacts(contact, search)) : contacts
+  );
 
   const htmlContacts = (
-   (filtredContacts || []).map(contact => {
+    (filtredContacts || []).map(contact => {
       const name = contact.name;
       const number = contact.number;
+      const email = contacts.email;
       const id = contact.id;
       return (
         <div className='line' key={id}>
-          <OneContactLine name={name} number={number} id={id} serach={search} setContacts={setContacts} /> 
+          <OneContactLine name={name} number={number} email={email} id={id} search={search} setContacts={setContacts} /> 
         </div>
       )
     })
-  ) 
+  );
 
   return (
     <div className='container'>
@@ -61,11 +80,18 @@ const Data = () => {
       </div>
         <div className='table'>
           <div className='first line'>
-            <div className='cell small'>Name</div>
-            <div className='cell big'>Number</div>
+            <div className='cell small sort' onClick={event => handleSort(event, 'name')}>Name</div>
+            <div className='cell big sort' onClick={event => handleSort(event, 'email')}>E-mail</div>
+            <div className='cell big sort' onClick={event => handleSort(event, 'number')}>Number</div>
           </div>
           { htmlContacts }
-          <AddField setContacts={setContacts} setSearch={setSearch} search={search} Token={Token} decodeUserId={decodeUserId} requestContacts={requestContacts}/>
+          <AddField 
+            setContacts={setContacts} 
+            setSearch={setSearch} 
+            search={search} 
+            Token={Token} 
+            decodeUserId={decodeUserId} 
+            requestContacts={requestContacts}/>
       </div>
     </div>
   )
@@ -75,7 +101,7 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path='/'render={props => (<LoginComponent {...props} /> )}  />
+        <Route exact path='/' render={props => (<LoginComponent {...props} /> )}  />
         <Route path='/contacts' render={props => (<Data {...props}  /> )}  /> 
       </Switch>
     </Router>

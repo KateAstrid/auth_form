@@ -6,7 +6,7 @@ const SignInStr = '/users';
 
 //requests for log in and sing in
 
-const getToken = (string, body ) => {
+const getToken = (string, body) => {
   fetch(`${string}`,{
     headers: {
       'Content-Type': 'application/json'
@@ -14,10 +14,10 @@ const getToken = (string, body ) => {
     method: "POST",
     body: `${body}`,
   })
-  .then((response) => {
+  .then(response => {
     if (response.ok) {
       return response.json().then(data => {
-        document.cookie =`token=${data.accessToken}`;
+        document.cookie = `token=${data.accessToken}`;
         document.location.assign('/contacts')
       });
     } else {
@@ -38,8 +38,8 @@ export const LoginComponent = ({ setLoggedIn }) => {
   const [password, setPassword] = useState('');
 
   const Body = JSON.stringify({
-    "email":login,
-    "password":password
+    "email": login,
+    "password": password,
   })
 
   const handleSubmit = (event, string) => {
