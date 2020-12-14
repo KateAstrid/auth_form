@@ -34,6 +34,7 @@ export const OneContactLine = ({ name, number, email, id, setContacts }) => {
   const [edited, setEdited] = useState(false);
   const [changedNumber, setChangedNumber] = useState(number);
   const [changedName, setChangedName] = useState(name);
+  const [changedEmail, setChangedEmail] = useState(email);
   
   const handleDelete = (id) => {
     fetch(`/600/contacts/${id}`,{
@@ -49,14 +50,14 @@ export const OneContactLine = ({ name, number, email, id, setContacts }) => {
   }
 
   const handleSave = (id) => {
-    if ((name !== changedName) || (number !== changedNumber)) {
+    if ((name !== changedName) || (number !== changedNumber) || (email !== changedEmail)) {
       fetch(`/600/contacts/${id}`,{
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${Token}`
         },
         method: "PATCH",
-        body: JSON.stringify({"name":`${changedName}`, "number":`${changedNumber}`})
+        body: JSON.stringify({"name":`${changedName}`, "number":`${changedNumber}`, "email":`${changedEmail}`})
       })
       .then(data => {
         console.log(data);
@@ -75,7 +76,7 @@ export const OneContactLine = ({ name, number, email, id, setContacts }) => {
           <input type='text' defaultValue={name} onChange={event => setChangedName(event.target.value)} />
         </div>
         <div className='cell big'>
-          <input type='text' defaultValue={email} onChange={event => setChangedName(event.target.value)} />
+          <input type='text' defaultValue={email} onChange={event => setChangedEmail(event.target.value)} />
         </div>
         <div className='cell big'>
           <input type='text' defaultValue={number} onChange={event => setChangedNumber(event.target.value)} />

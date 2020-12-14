@@ -42,8 +42,6 @@ const Data = () => {
       data.sort((a,b) => b[key].localeCompare(a[key])) 
       setSort([key, 'asc'])
     };
-  
-    console.log(data, 'data')
     setContacts(data)
   };
 
@@ -55,7 +53,7 @@ const Data = () => {
     (filtredContacts || []).map(contact => {
       const name = contact.name;
       const number = contact.number;
-      const email = contacts.email;
+      const email = contact.email;
       const id = contact.id;
       return (
         <div className='line' key={id}>

@@ -1,109 +1,81 @@
 {
   "contacts": [
     {
-      "name": "mall",
-      "number": "12234",
-      "email": "katrin892003@yandex.ru",
-      "userId": "1",
-      "id": 9
-    },
-    {
-      "name": "emergency",
-      "number": "911",
-      "email": "kat892@yandex.ru",
-      "userId": "1",
-      "id": 10
-    },
-    {
-      "name": "doctor",
-      "number": "23456",
-      "email": "trin89@yandex.ru",
-      "userId": "1",
-      "id": 14
-    },
-    {
-      "name": "laundry",
-      "number": "3345678",
-      "email": "ggrin892003@ya.ru",
-      "userId": "1",
-      "id": 15
-    },
-    {
-      "name": "bookstore",
-      "number": "323409",
-      "email": "892003@gmail.com",
-      "userId": "1",
-      "id": 16
-    },
-    {
-      "name": "flowers",
-      "number": "364749302",
-      "email": "katrin@yandex.ru",
-      "userId": "1",
-      "id": 17
-    },
-    {
-      "name": "Sasha",
-      "number": "98867654",
-      "email": "s2003@mail.ru",
-      "userId": "1",
-      "id": 18
-    },
-    {
       "name": "George",
       "number": "33332783",
-      "email": "fin768@yandex.kz",
       "userId": "2",
       "id": 20
     },
     {
       "name": "Valerie",
       "number": "4223333",
-      "email": "489ma3@crot.ru",
       "userId": "2",
       "id": 21
     },
     {
       "name": "Viktor",
       "number": "089787687",
-      "email": "karrp@yandex.ru",
       "userId": "2",
       "id": 24
     },
     {
       "name": "Rasta",
       "number": "78247876",
-      "email": "top100@saf.ru",
       "userId": "2",
       "id": 25
     },
     {
       "name": "23",
       "number": "45",
-      "email": "qwerty@foo.bar",
       "userId": "2",
       "id": 26
     },
     {
       "name": "2",
       "number": "2",
-      "email": "foobar43@pul.ru",
       "userId": "2",
       "id": 27
     },
     {
       "name": "2",
       "number": "3",
-      "email": "hfjfkf@yandex.lk",
       "userId": "2",
       "id": 28
     },
     {
       "name": "shop",
-      "number": "33456",
-      "email": "0495736@kdghg.ru",
+      "number": "1112",
+      "email": "shop@fop.ru",
       "userId": "1",
       "id": 29
+    },
+    {
+      "name": "apotheke",
+      "number": "12397756",
+      "email": "ap@sjkdh.com",
+      "userId": "1",
+      "id": 30
+    },
+    {
+      "name": "alex",
+      "number": "79876432",
+      "email": "alex@com.com",
+      "userId": "1",
+      "id": 31
+    },
+    {
+      "name": "love",
+      "number": "9836253",
+      "email": "love@pot.kz",
+      "userId": "1",
+      "id": 32
+    },
+    {
+      "name": "mass",
+      "number": "653098",
+      "email": "hrut87@xz.xz",
+      "userId": "1",
+      "id": 33
     }
   ],
   "users": [
